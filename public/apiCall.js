@@ -9,3 +9,6 @@ apicall = (method, url, callback) => {
   xhr.open(method, url);
   xhr.send(data);
 };
+
+
+
