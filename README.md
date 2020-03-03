@@ -1,1 +1,1 @@
-# booking-journeyy
+# booking-journey
