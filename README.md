@@ -7,7 +7,7 @@ Contents:
 1. [User Journey](#user-journey)
  <hr>
 
-## What ?
+## What
 The project serve the clients by offering them many Journeys around the world, that he/she may be interested in booking to them.
 
 ## Schema 
