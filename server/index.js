@@ -13,4 +13,8 @@ router.use(express.static(path.join(__dirname,'..','public')));
 router.use(error.notFound);
 router.use(error.serverErr);
 
+router.post('/login',(req,res)=>{
+    console.log(req.body)
+    
+})
 module.exports = router
