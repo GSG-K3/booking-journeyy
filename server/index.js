@@ -2,7 +2,6 @@ const express = require('express');
 const request = require('request');
 const error = require('./controller/error');
 const path = require('path');
-const build = require('./models/database/config/build')
 const getdata = require("./models/database/queries/getdata")
 const postdata = require("./models/database/queries/postdata")
     // const hash = require("./controller/index")
@@ -27,6 +26,23 @@ router.post("/postsingup", (req, res) => {
 router.get("/public/signUp", (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'signUp.html'))
 })
+router.post('/login',(req,res)=>{
+    let reqbody = req.body;
+    console.log(reqbody)
+    getdata(reqbody,(err,response)=>{
+        if(err){ console.log(err)}
+        else {
+            if(bcrypt.compareSync(req.body.user_password, response[0].user_password)==true){
+                res.send('welcom')
+            }
+            else{
+                res.send('you are not welcome....go home mf')
+            }
+                    
+        }})
+
+})
+
 router.use(error.notFound);
 router.use(error.serverErr);
 
