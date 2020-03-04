@@ -27,6 +27,24 @@ router.post("/postsingup", (req, res) => {
 router.get("/public/signUp", (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'signUp.html'))
 })
+
+router.get('/Journies',(req,res)=>{
+
+res.sendFile(path.join(__dirname,'..','public','login.html'))
+
+})
+
+router.get('/api/Journies', (req,res)=>{
+    console.log('000000000000')
+    getdata.getJrny(data =>{
+    res.send(data)
+    })
+
+})
+
+
+
+
 router.use(error.notFound);
 router.use(error.serverErr);
 
