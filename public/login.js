@@ -17,9 +17,10 @@ window.addEventListener('load', () => {
                 h.innerHTML= e.place_name
                 hh.innerHTML= e.journey_date
                 p.innerText =e.journey_des
+                img.classList.add("img")
 
-                div.appendChild(img);
                 div.appendChild(h);
+                div.appendChild(img);
                 div.appendChild(hh);
                 div.appendChild(p);
                 journeyData.appendChild(div);

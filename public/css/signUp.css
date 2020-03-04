@@ -1,0 +1,19 @@
+body {
+  margin: 80px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}

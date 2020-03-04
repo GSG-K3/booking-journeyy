@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/signUp.css" rel="stylesheet" />
     <title>Document</title>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <form action="/postsingup" class="form" method="POST">
-        <label> User Name <input type="text" id="userName" name="userName" required/> </label>
-        <label> Email <input type="email" id="userEmail" name="userMail" required/> </label>
-        <label> Phone <input type="number" id="userPhone" name="userPhone" required/> </label>
-        <label> User Password <input type="password" id="userPass" name="userPass" required/> </label>
-        <input type="submit" value="sign up"></form>
-</body>
+      <label class="label">
+        User Name <input type="text" id="userName" name="userName" required />
+      </label>
+      <label>
+        Email <input type="email" id="userEmail" name="userMail" required />
+      </label>
+      <label>
+        Phone <input type="number" id="userPhone" name="userPhone" required />
+      </label>
+      <label>
+        User Password
+        <input type="password" id="userPass" name="userPass" required />
+      </label>
+      <input type="submit" value="sign up" />
+    </form>
+  </body>
 
-<script src="./apicall.js"></script>
-<script src="./index.js"></script>
-
+  <script src="./apicall.js"></script>
+  <script src="./index.js"></script>
 </html>
