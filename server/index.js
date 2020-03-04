@@ -7,6 +7,7 @@ const getdata = require("./models/database/queries/getdata")
 const postdata = require("./models/database/queries/postdata")
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+
 const router = express.Router();
 router.use(bodyParser.json())
 router.use(bodyParser.urlencoded({ extended: false }));

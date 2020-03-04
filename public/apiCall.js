@@ -1,6 +1,6 @@
 const xhr = new XMLHttpRequest();
 
-apicall = (method, url, callback) => {
+apicall = (method, url, callback, obj) => {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const response = JSON.parse(responseText)
@@ -8,5 +8,5 @@ apicall = (method, url, callback) => {
         }
     };
     xhr.open(method, url);
-    xhr.send(data);
+    xhr.send(obj);
 };
