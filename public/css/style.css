@@ -1,5 +1,30 @@
-.form {
+.form_style {
+    font-size: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #4f4147;
+}
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #F2D1C9;
+
+}
+.input_style{
+    width: 350px;
+    border: 2px solid #4f4147;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px ;
+    color: #4f4147;
+    
+    
+}
+.header_style{
+    color: #384d5a;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
 }
