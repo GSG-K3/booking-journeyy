@@ -1,4 +1,4 @@
-const dbconnection = require('../config/connection')
+const connection = require('../config/connection')
 
 const getdata = (callback) => {
     const sql = {
@@ -14,4 +14,17 @@ const getdata = (callback) => {
     });
 }
 
-module.exports = getdata
+const getJrny = (callback) =>{
+    const sql = 'SELECT * FROM journey;'
+        
+        connection.query(sql, (err, res) => {
+        if (err) {
+            return callback(err);
+        } else {
+            return callback( res.rows)
+        }
+    });
+
+}
+
+module.exports =  {getdata, getJrny}
