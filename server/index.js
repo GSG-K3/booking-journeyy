@@ -19,7 +19,6 @@ router.post("/postsingup", (req, res) => {
     const hashing = bcrypt.hashSync(reqBody.userPass, 10);
     // const hashing = hash(reqBody.userPass)
     reqBody.userPass = hashing
-    console.log(reqBody)
     postdata(reqBody)
     res.redirect("/")
 })
@@ -28,12 +27,11 @@ router.get("/public/signUp", (req, res) => {
 })
 router.post('/login',(req,res)=>{
     let reqbody = req.body;
-    console.log(reqbody)
-    getdata(reqbody,(err,response)=>{
+    getdata.getdata(reqbody,(err,response)=>{
         if(err){ console.log(err)}
         else {
             if(bcrypt.compareSync(req.body.user_password, response[0].user_password)==true){
-                res.send('welcom')
+                res.redirect('/Journies')
             }
             else{
                 res.send('you are not welcome....go home mf')
@@ -42,6 +40,23 @@ router.post('/login',(req,res)=>{
         }})
 
 })
+
+
+router.get('/Journies',(req,res)=>{
+
+res.sendFile(path.join(__dirname,'..','public','login.html'))
+
+})
+
+router.get('/api/Journies', (req,res)=>{
+    getdata.getJrny(data =>{
+    res.send(data)
+    })
+
+})
+
+
+
 
 router.use(error.notFound);
 router.use(error.serverErr);

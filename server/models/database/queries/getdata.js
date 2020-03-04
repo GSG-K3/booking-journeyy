@@ -14,4 +14,17 @@ const getdata =(reqbody, callback) => {
     });
 }
 
-module.exports = getdata
+const getJrny = (callback) =>{
+    const sql = 'SELECT * FROM journey;'
+        
+        connection.query(sql, (err, res) => {
+        if (err) {
+            return callback(err);
+        } else {
+            return callback( res.rows)
+        }
+    });
+
+}
+
+module.exports =  {getdata, getJrny}
