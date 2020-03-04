@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
+</head>
 
-  <body>
-    <form action="" class="form">
-      <label> User Name <input type="text" id="userName" /> </label>
-      <label> User Password <input type="text" id="userPass" /> </label>
-      <label> Email <input type="text" id="userEmail" /> </label>
-      <label> Phone <input type="text" id="userPhone" /> </label>
-    </form>
-  </body>
 
-  <script src="./apicall.js"></script>
-  <script src="./index.js"></script>
+<body>
+    <form action="/postsingup" class="form" method="POST">
+        <label> User Name <input type="text" id="userName" name="userName" required/> </label>
+        <label> Email <input type="text" id="userEmail" name="userMail" required/> </label>
+        <label> Phone <input type="text" id="userPhone" name="userPhone" required/> </label>
+        <label> User Password <input type="text" id="userPass" name="userPass" required/> </label>
+        <input type="submit" value="sign up"></form>
+</body>
+
+<script src="./apicall.js"></script>
+<script src="./index.js"></script>
+
 </html>
