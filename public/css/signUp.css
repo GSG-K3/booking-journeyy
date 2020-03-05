@@ -1,25 +1,25 @@
 body {
-  margin: 80px;
-  background: url(../pics/pic2.jpg) no-repeat;
+    margin: 80px;
+    background: url(../pics/pic2.jpg) no-repeat;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  /* text-align: center; */
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* text-align: center; */
+    align-items: center;
 }
 
-label{
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: center;
-  align-items: center;
-  width: 250px;
-  line-height: 100px;
+label {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+    line-height: 100px;
 }
