@@ -1,5 +1,43 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+body {
+  margin: 100px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  background: center no-repeat url("../pics/pic1.jpeg");
+  /* background-color: #f2d1c9; */
+  /* border: 2px solid  #4f4147;; */
+}
+
+.header_style {
+  color: #384d5a;
+
+  position: relative;
+  display: flex;
+  text-align: center;
+  margin: 20px;
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+}
+.form_style {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #4f4147;
+}
+
+.input_style {
+  width: 200px;
+  height: 20px;
+
+  border: 2px solid #4f4147;
+
+  border-radius: 10px;
+
+  margin: 10px 10px 10px 10px;
+
+  /* color: #4f4147; */
 }
