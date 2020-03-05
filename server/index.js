@@ -25,32 +25,37 @@ router.post("/postsingup", (req, res) => {
 router.get("/public/signUp", (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'signUp.html'))
 })
-router.post('/login',(req,res)=>{
+router.post('/login', (req, res) => {
     let reqbody = req.body;
-    getdata.getdata(reqbody,(err,response)=>{
-        if(err){ console.log(err)}
-        else {
-            if(bcrypt.compareSync(req.body.user_password, response[0].user_password)==true){
+    getdata.getdata(reqbody, (err, response) => {
+        if (err) { console.log(err) } else {
+            if (bcrypt.compareSync(req.body.user_password, response[0].user_password) == true) {
                 res.redirect('/Journies')
+            } else {
+                res.redirect('/notMember')
             }
-            else{
-                res.send('you are not welcome....go home mf')
-            }
-                    
-        }})
+
+        }
+    })
 
 })
 
 
-router.get('/Journies',(req,res)=>{
+router.get('/Journies', (req, res) => {
 
-res.sendFile(path.join(__dirname,'..','public','login.html'))
+    res.sendFile(path.join(__dirname, '..', 'public', 'login.html'))
 
 })
 
-router.get('/api/Journies', (req,res)=>{
-    getdata.getJrny(data =>{
-    res.send(data)
+router.get('/notMember', (req, res) => {
+
+    res.sendFile(path.join(__dirname, '..', 'public', 'notloged.html'))
+
+})
+
+router.get('/api/Journies', (req, res) => {
+    getdata.getJrny(data => {
+        res.send(data)
     })
 
 })
