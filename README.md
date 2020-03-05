@@ -8,7 +8,7 @@ Contents:
  <hr>
 
 ## What
-The project serve the clients by offering them many Journeys around the world, that he/she may be interested in booking them.
+The project serves the clients by offering them many Journeys around the world, that he/she may be interested in booking them.
 
 ## Schema 
 ![image](https://user-images.githubusercontent.com/56412800/75764016-e8ea0980-5d45-11ea-9196-92816dea6eb5.png)
