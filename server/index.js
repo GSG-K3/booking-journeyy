@@ -43,13 +43,14 @@ router.post('/login', (req, res) => {
 
 router.get('/Journies', (req, res) => {
 
-    res.sendFile(path.join(__dirname, '..', 'public', 'login.html'))
+    res.sendFile(path.join(__dirname, '..', 'public', 'journies.html'))
 
 })
 
 router.get('/notMember', (req, res) => {
 
     res.sendFile(path.join(__dirname, '..', 'public', 'notloged.html'))
+
 
 })
 

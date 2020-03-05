@@ -1,0 +1,21 @@
+body {
+    margin: 70px;
+}
+
+.divStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.img {
+    width: 200px;
+    height: 100px;
+}
+
+p {
+    width: 350px;
+    height: 100px;
+}
