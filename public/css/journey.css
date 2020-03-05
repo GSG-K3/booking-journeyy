@@ -1,5 +1,9 @@
 body {
     margin: 70px;
+    background-color: #f2d1c9;
+    /* opacity: 40%; */
+    color: #331221;
+    text-align: center;
 }
 
 .divStyle {
@@ -18,4 +22,10 @@ body {
 p {
     width: 350px;
     height: 100px;
+}
+
+.btn {
+    width: 62px;
+    height: 20px;
+    background-color: #8AB5BF;
 }

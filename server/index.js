@@ -8,6 +8,7 @@ const postdata = require("./models/database/queries/postdata")
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 const router = express.Router();
 router.use(bodyParser.json())
@@ -27,9 +28,11 @@ router.get("/public/signUp", (req, res) => {
 })
 router.post('/login', (req, res) => {
     let reqbody = req.body;
+
     getdata.getdata(reqbody, (err, response) => {
         if (err) { console.log(err) } else {
             if (bcrypt.compareSync(req.body.user_password, response[0].user_password) == true) {
+                res.cookie(req.body.user_name, response[0].user_password)
                 res.redirect('/Journies')
             } else {
                 res.redirect('/notMember')
