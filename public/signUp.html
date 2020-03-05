@@ -10,22 +10,20 @@
   <body>
     <form action="/postsingup" class="form" method="POST">
       <label class="label">
-        User Name <input type="text" id="userName" name="userName" required />
+        <input type="text" id="userName" name="userName" required  placeholder="User Name "/></label>
+        <label>
+        <input type="email" id="userEmail" name="userMail" required placeholder="Email"/>
       </label>
       <label>
-        Email <input type="email" id="userEmail" name="userMail" required />
+        <input type="password" id="userPass" name="userPass" required placeholder=" User Password"/>
       </label>
-      <label>
-        Phone <input type="number" id="userPhone" name="userPhone" required />
-      </label>
-      <label>
-        User Password
-        <input type="password" id="userPass" name="userPass" required />
-      </label>
-      <input type="submit" value="sign up" />
+            <label>
+              <input type="number" id="userPhone" name="userPhone" required placeholder="Phone" />
+            </label>
+        <input type="submit" value="sign up" />
     </form>
   </body>
 
-  <script src="./apicall.js"></script>
-  <script src="./index.js"></script>
+  <script src="./js/apiCall.js"></script>
+  <script src="./js/index.js"></script>
 </html>

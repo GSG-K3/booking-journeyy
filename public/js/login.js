@@ -28,12 +28,9 @@ window.addEventListener('load', () => {
 
 
         })
-
-
-
     }
     getJrn()
-    console.log("1111111111111111")
+   
 })
 
 
