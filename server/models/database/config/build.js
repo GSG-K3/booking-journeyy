@@ -10,5 +10,5 @@ const create = (createTable, tabelValus) => {
     }).catch(err => console.log("er", err))
 
 }
+
 create(createTable, tabelValus);
-module.exports = create;
